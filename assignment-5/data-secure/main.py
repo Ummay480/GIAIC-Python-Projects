@@ -97,7 +97,7 @@ if st.session_state.current_page =="Home":
         if st.button("Retrive Data", use_container_width=True):
             change_page("Retrive Data")
     # Display Store data count
-    st.info(f" Currently storing {len(st.session_state.stored_data)}encrypted data")
+    st.info(f" Currently storing {len(st.session_state.stored_data)} encrypted data")
 
 st.session_state.current_page == "Store Data":
 st.subheader("📁Store Data Securely")
