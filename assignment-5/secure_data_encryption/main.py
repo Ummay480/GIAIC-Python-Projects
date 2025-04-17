@@ -134,8 +134,8 @@ elif st.session_state.current_page == "Retrieve Data":
         attempts_remaining = 3 - st.session_state.failed_attempts
         st.info(f"Attempts remaining: {attempts_remaining}")
 
-        data_id = st.text_input("Enter Data ID:")
-        passkey = st.text_input("Enter_passkey:", type="password")
+        data_id = st.text_input("Enter Data ID: ")
+        passkey = st.text_input("Enter passkey: ", type="password")
 
         if st.button("Decrypt"):
             if data_id and passkey:
@@ -175,7 +175,7 @@ elif st.session_state.current_page == "Retrieve Data":
                             reset_failed_attempts()
                             st.success("✅ Reauthorized successfully!")
                             st.session_state.current_page = "Home"
-                            st.rerurn() #Updated from experimental_rerun()
+                            st.rerun() #Updated from experimental_rerun()
                         else:
                             st.error("❌ Incorrect password!")
 
